@@ -10,6 +10,8 @@ import Jobs from './Jobs.jsx';
 import Applayout from './Applayout.jsx';
 import AppContext from 'antd/es/app/context.js';
 import AppProvider from './Context/AppProvider.jsx';
+import SignUp from './Components/authentication/Signup.jsx';
+import Login from './Components/authentication/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
   {
     path: "/jobs",
     element: <Jobs/>
+  },
+  {
+    path:"/register",
+    element: <SignUp/>
+  },
+  {
+    path:'login',
+    element: <Login/>
   }
 ]);
 

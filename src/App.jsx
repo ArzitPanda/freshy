@@ -5,9 +5,10 @@ import FileConvtLogo from "./assets/images.png"
 import { Row, Col, Button, Typography } from 'antd';
 import './App.css'
 import Applayout from './Applayout';
+import FormModal from './Components/modal/FormModal';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(false);
 
   return (
     <>
@@ -26,11 +27,13 @@ function App() {
           <Typography.Paragraph style={{ marginBottom: 20 }}>
             A compelling description of your product or service that engages visitors.
           </Typography.Paragraph>
-          <Button type="primary" >Get Started</Button>
+          <Button type="primary" onClick={()=>{setCount(!count)}} >Create a job</Button>
         </Col>
       
       </Col>
     </section>
+
+    <FormModal open={count} setOpen={setCount}/>
     </Applayout>
     </>
   )

@@ -8,7 +8,10 @@ const Applayout = ({children}) => {
 
 const data = useContext(Context)
 
-
+const items1 = ['1', '2', '3'].map((key) => ({
+    key,
+    label: `nav ${key}`,
+  }));
     const { Sider, Content ,Header} = Layout;
     const {Item} =Menu;
   return (
@@ -31,6 +34,17 @@ const data = useContext(Context)
         
      
 </Sider> <Layout >
+
+<Header
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          backgroundColor:'whitesmoke'
+        }}
+      >
+        <div className="demo-logo" />
+      
+      </Header>
         <Content >
           <div
             
